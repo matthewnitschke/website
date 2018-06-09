@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pyrtio</title>
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/site.css">
+
+</head>
+<body>
+  <!-- I did this by hand, It was unfortunate -->
+  <svg id="svg" width="100%" height="20rem" viewBox="0 0 1216 823" xmlns="http://www.w3.org/2000/svg" xmls:xlink="http://www.w3.org/1999/xlink">
+
+    <!-- Bottom Left -->
+    <path class="path" d="M429,362 L429,484 L533,543"></path> <!-- L Path -->
+    <path class="path" d="M427,470 L313,536"></path> <!-- = Top Path -->
+    <path class="path" d="M439,492 L325,558"></path> <!-- = Bottom Path -->
+
+    <!-- Top -->
+    <path class="path" d="M473,286 L577,226 L726,312 L726,483 L847,523"></path> <!-- 2 Path -->
+    <path class="path" d="M564,232 L564,107"></path> <!-- = Path left -->
+    <path class="path" d="M590,232 L590,107"></path> <!-- = Path right -->
+    <path class="path" d="M724,484 L620,545"></path> <!-- / Path left -->
+    <path class="path" d="M724,313 L846,273"></path> <!-- / Path left -->
+    <path class="path" d="M751,330 L751,465"></path> <!-- | Path right -->
+
+    <!-- Right -->
+    <path class="path" d="M923,307 L989,398 L920,493"></path> <!-- Backwards L Path -->
+    <path class="path" d="M957,397 L899,478"></path> <!-- / Path -->
+  </svg>
+  <div class="header">Matthew Nitschke</div>
+
+  <div class="p">
+    Oh Hey. I make stuff on computers.<br> I am currently an undergraduate in computer <br> science and an intern at Workiva<br>
+    <a href="https://github.com/matthewnitschke"><i class="fab fa-github github" aria-hidden="true"></i></a>
+  </div>
+
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var paths = document.querySelectorAll('path');
+        paths.forEach(function(path){
+          var length = path.getTotalLength();
+          path.style.transition = path.style.WebkitTransition = 'none';
+          path.style.strokeDasharray = length + ' ' + length;
+          path.style.strokeDashoffset = length;
+          path.getBoundingClientRect();
+          path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s ease-in-out';
+          path.style.strokeDashoffset = '0';
+        });
+      });
+  </script>
+</body>
+</html>

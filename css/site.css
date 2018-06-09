@@ -1,0 +1,51 @@
+a{
+  color:inherit;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+  padding:.2rem;
+}
+
+.path{
+  stroke: black;
+  stroke-width: 8;
+  fill: none;
+}
+
+.header {
+  margin-top:-5rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 300%;
+  text-align: center;
+  -webkit-animation: fadein 5s;
+}
+
+.p{
+  margin-top:1rem;
+  font-size: 130%;
+  text-align: center;
+  -webkit-animation: fadein 5s;
+}
+
+.github{
+  margin-top:1.5rem;
+  font-size: 400%;
+  -webkit-animation: fadein 5s;
+  cursor: pointer;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.github:hover{
+  color: #555;
+}
+
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
